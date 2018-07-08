@@ -1,0 +1,133 @@
+<!--
+  Generated template for the PrintPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="custom-navbar-header-color">
+    <ion-title>PRINT FIELD</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-label stacked>Bill/Serial No:</ion-label>
+    <ion-item>
+      <ion-input readonly name="billNo" placeholder="Bill No."></ion-input>
+    </ion-item>
+    <ion-label stacked>Vehicle No:</ion-label>
+    <ion-item>
+        <ion-input type="tel" name="vehicleNo" placeholder="Vehicle No." readonly></ion-input>
+    </ion-item>
+      <ion-label stacked class="toggle-label">Mobile No:
+        <ion-toggle class="toggle" checked="false" float-right></ion-toggle>
+      </ion-label>
+      <ion-item>
+        <ion-input type="tel" name="mobileNo" readonly placeholder="Mobile No."></ion-input>
+      </ion-item>
+        <ion-label stacked class="toggle-label">Vehicle Type: 
+          <ion-toggle class="toggle" checked="true" float-right></ion-toggle>
+        </ion-label>
+        <ion-item>
+            <ion-input type="text" name="vehicleType" readonly placeholder="Vehicle Type"></ion-input>
+        </ion-item>
+        <ion-label stacked class="toggle-label">Vehicle IN/OUT :
+          <ion-toggle class="toggle" checked="true" float-right></ion-toggle>
+        </ion-label>
+        <ion-item>
+            <ion-input type="text" name="vehicleInOut" readonly placeholder="Vehicle IN/OUT"></ion-input>
+        </ion-item>
+        <ion-label stacked class="toggle-label">Charges:
+            <ion-toggle class="toggle" disabled checked="false" float-right></ion-toggle>
+        </ion-label>
+        <ion-item>
+            <ion-input type="number" readonly placeholder="Charges" name="charges"></ion-input>
+        </ion-item>
+        <ion-label stacked class="toggle-label">Gross Weight:
+            <ion-toggle class="toggle" checked="true" float-right></ion-toggle>
+        </ion-label>
+        <ion-item>
+            <ion-input type="number" name="grossWeight" readonly placeholder="Gross Weight"></ion-input>
+        </ion-item>
+        <ion-label stacked class="toggle-label">Net Weight:
+          <ion-toggle class="toggle" checked="false" float-right></ion-toggle>
+        </ion-label>
+        <ion-item>
+            <ion-input type="number" readonly placeholder="Net Weight" name="netWeight"></ion-input>
+        </ion-item>
+        <ion-label stacked class="toggle-label">Customer Name:
+          <ion-toggle class="toggle" checked="false" float-right></ion-toggle>
+        </ion-label>
+        <ion-item>
+            <ion-input type="text" readonly placeholder="Customer Name" name="customerName"></ion-input>
+        </ion-item>
+        <ion-label stacked class="toggle-label">Item Name:
+            <ion-toggle class="toggle" disabled checked="false" float-right></ion-toggle>
+        </ion-label>
+        <ion-item>
+            <ion-input type="text" readonly placeholder="Item Name" name="itemName"></ion-input>
+        </ion-item>
+        <ion-label stacked class="toggle-label">Quantity:
+            <ion-toggle class="toggle" checked="true" float-right></ion-toggle>
+        </ion-label>
+        <ion-item>
+            <ion-input type="number" name="quantity" readonly placeholder="Quantity"></ion-input>
+        </ion-item>
+        <ion-label stacked class="toggle-label">Inv/Chalan Number:
+            <ion-toggle class="toggle" checked="true" float-right></ion-toggle>
+        </ion-label>
+        <ion-item>
+            <ion-input type="number" name="invChalanNo" placeholder="Inv/Chalan No." readonly></ion-input>
+        </ion-item>
+        <ion-label stacked class="toggle-label">Cash/Card:
+            <ion-toggle class="toggle" checked="true" float-right></ion-toggle>
+        </ion-label>
+        <ion-item>
+            <ion-input type="number" name="cashOrCard" placeholder="Cash/Card" readonly></ion-input>
+        </ion-item>
+        <ion-label stacked class="toggle-label">Remarks:
+            <ion-toggle class="toggle" checked="true" float-right></ion-toggle>
+        </ion-label>
+        <ion-item>
+            <ion-input type="text" readonly placeholder="Remarks" name="remarks"></ion-input>
+        </ion-item>
+        <ion-label stacked class="toggle-label">Tare Weight:
+            <ion-toggle class="toggle" checked="false" float-right></ion-toggle>
+        </ion-label>
+        <ion-item>
+            <ion-input type="number" readonly placeholder="Tare Weight" name="tareWeight"></ion-input>
+        </ion-item>
+        <ion-label stacked class="toggle-label">Date:
+            <ion-toggle class="toggle" checked="true" float-right></ion-toggle>
+        </ion-label>
+        <ion-item>
+            <ion-input type="number" readonly placeholder="Date" name="date"></ion-input>
+        </ion-item>
+        <ion-label stacked class="toggle-label">Field 1:
+            <ion-toggle class="toggle" disabled checked="false" float-right></ion-toggle>
+        </ion-label>
+        <ion-item>
+            <ion-input type="text" readonly placeholder="Field 1" name="field1"></ion-input>
+        </ion-item>
+        <ion-label stacked class="toggle-label">Field 2:
+            <ion-toggle class="toggle" checked="true" float-right></ion-toggle>
+        </ion-label>
+        <ion-item>
+            <ion-input type="text" readonly placeholder="Field 2" name="field2"></ion-input>
+        </ion-item>
+        <ion-label stacked class="toggle-label">Field 3:
+            <ion-toggle class="toggle" checked="false" float-right></ion-toggle>
+        </ion-label>
+        <ion-item>
+            <ion-input type="text" readonly placeholder="Field 3" name="field3"></ion-input>
+        </ion-item>
+    <div class="btn-weighing-forms">
+        <button ion-button tappable>EDIT</button>
+        <button ion-button tappable>SAVE</button>
+        <button ion-button tappable (click)="navigateToPrintConfig()">PRINT</button>
+        <button ion-button tappable>CANCEL</button>
+    </div>
+</ion-content>

@@ -1,0 +1,110 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.menu-items {
+  font-weight: 700;
+}
+
+.center-text {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+ion-content {
+  %no-input-border {
+    border-bottom-color: transparent;
+    box-shadow: none;
+  }
+
+  ion-item {
+    &.item-input {
+      &.item-md {
+        &.input-has-focus {
+          .item-inner {
+            @extend %no-input-border;
+          }
+        }
+      }
+
+      &.ng-invalid {
+        &.item-md {
+          &.ng-touched:not(.input-has-focus):not(.item-input-has-focus) {
+            .item-inner {
+              @extend %no-input-border;
+            }
+          }
+        }
+      }
+
+      &.ng-valid {
+        &.item-md {
+          &.input-has-value:not(.input-has-focus):not(.item-input-has-focus) {
+            .item-inner {
+              @extend %no-input-border;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.toolbar-md-custom-navbar-header-color .bar-button-clear-md, 
+.toolbar-md-custom-navbar-header-color .bar-button-default-md, 
+.toolbar-md-custom-navbar-header-color .bar-button-outline-md, 
+.toolbar-md-custom-navbar-header-color .toolbar-title-md {
+  color: #424242!important;
+}
+
+.toolbar-title-md {
+  font-weight: 600;
+}
+
+.btn-weighing-forms {
+  text-align: center;
+  button {
+    background: #FD8C3C;
+    font-weight: 600;
+    color: #000;
+    max-width: 20%;
+    font-size: 1.2rem;
+  }
+  button:hover {
+    background: #FD8C3C !important;
+  }
+}
+
+ion-label {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.item {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.custom-table {
+  line-height: 3.5;
+}

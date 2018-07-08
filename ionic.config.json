@@ -1,0 +1,8 @@
+{
+  "name": "weighApp",
+  "app_id": "9e8a8f30",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

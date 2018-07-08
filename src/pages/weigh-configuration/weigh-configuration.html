@@ -1,0 +1,41 @@
+<!--
+  Generated template for the WeighConfigurationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="custom-navbar-header-color">
+    <ion-title>WEIGH CONFIGURATION</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-label stacked>Beginning of the packet:</ion-label>
+  <ion-item>
+      <ion-input type="text" name="beginPacket"></ion-input>
+  </ion-item>
+  <ion-label stacked>Length of the packet:</ion-label>
+  <ion-item>
+      <ion-input type="text" name="packetLength"></ion-input>
+  </ion-item>
+  <ion-label stacked>Position of weight:</ion-label>
+  <ion-item>
+      <ion-input type="text" name="weightPosition"></ion-input>
+  </ion-item>
+  <ion-label stacked>Length of weight:</ion-label>
+  <ion-item>
+      <ion-input type="text" name="weightLength"></ion-input>
+  </ion-item>
+  <ion-label stacked>Baud rate:</ion-label>
+  <ion-item>
+      <ion-input type="text" name="baudRate"></ion-input>
+  </ion-item>
+  <div class="btn-weighing-forms">
+    <button ion-button tappable (click)="navigateToPrint()">OK</button>
+    <button ion-button tappable>CANCEL</button>
+    <button ion-button tappable>EDIT</button>
+  </div>
+</ion-content>

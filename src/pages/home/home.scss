@@ -1,0 +1,13 @@
+page-home {
+    .card:first-child {
+        margin-bottom: 25px !important;
+    }
+    .digi-card {
+        cursor: pointer;
+        background: #FE6601;
+        .digi-image {
+            width: 25vh !important;
+            margin: 10px auto;
+        }
+    }
+}

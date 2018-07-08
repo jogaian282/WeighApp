@@ -1,0 +1,59 @@
+<!--
+  Generated template for the CustomersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="custom-navbar-header-color">
+    <ion-title>CUSTOMERS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid no-padding>
+    <ion-row no-padding>
+      <ion-col>
+        <button color="custom-navbar-header-color" ion-button icon-end icon-only clear float-right>
+          <ion-icon name="add"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-item>
+    <ion-input type="text"></ion-input>
+    <ion-icon name="search" item-right></ion-icon>
+  </ion-item>
+  <ion-label stacked>Customer Name : </ion-label>
+  <ion-item>
+      <ion-input type="text" name="customerName"></ion-input>
+  </ion-item>
+  <ion-label stacked class="toggle-label">Phone No : 
+    <ion-toggle class="toggle" checked="true" float-right></ion-toggle>
+  </ion-label>
+  <ion-item>
+    <ion-input type="text" name="phoneNo"></ion-input>
+  </ion-item>
+  <ion-label stacked class="toggle-label">Mail Id : 
+    <ion-toggle disabled class="toggle" checked="true" float-right></ion-toggle>
+  </ion-label>
+  <ion-item>
+      <ion-input type="text" name="mailId"></ion-input>
+  </ion-item>
+  <ion-label stacked>Vehicle No : </ion-label>
+  <ion-item>
+    <ion-label stacked></ion-label>
+    <ion-select multiple="true">
+      <ion-option>Bacon</ion-option>
+      <ion-option>Black Olives</ion-option>
+      <ion-option>Extra Cheese</ion-option>
+      <ion-option>Mushrooms</ion-option>
+      <ion-option>Pepperoni</ion-option>
+      <ion-option>Sausage</ion-option>
+    </ion-select>
+  </ion-item>
+  <div class="btn-weighing-forms">
+    <button ion-button tappable>SAVE </button>
+    <button ion-button tappable>CANCEL</button>
+  </div>
+</ion-content>

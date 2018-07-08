@@ -1,0 +1,34 @@
+<!--
+  Generated template for the DigiWeighingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="custom-navbar-header-color">
+    <ion-title>DIGI WEIGHING</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card padding class="digi-weigh">
+    <ion-card-content>
+      <ion-card-title class="center-text digi-weigh-content">
+        45.567
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+  <button class="btn-weigh" type="button" ion-button block tappable>FIRST WEIGHMENT</button>
+
+  <button class="btn-weigh" type="button" (click)="openSecondWeighAlert()" ion-button block tappable>SECOND WEIGHMENT</button>
+
+  <button class="btn-weigh" type="button" (click)="openThirdWeighAlert()" ion-button block tappable>SECOND WEIGHMENT WITH AUTO TARE</button>
+
+  <button class="btn-weigh" type="button" (click)="openFourthWeighAlert()" ion-button block tappable>TICKET REPRINT</button>
+
+  <!-- TODO -->
+  <button ion-button block class="btn-weigh" (click)="navigateToDigiWeighingForms()" tappable>CLICK</button>
+</ion-content>

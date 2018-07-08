@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="custom-navbar-header-color">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>HOME</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card (click)="navigateToDigiWeighingPage()" class="digi-card">
+    <img src="assets/imgs/scale-icon-400.png" class="digi-image"/>
+    <ion-card-content>
+      <ion-card-title class="center-text">
+        Digi Weighing
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card (click)="navigateToReportsPage()" class="digi-card">
+    <img src="assets/imgs/mono-kdeprint-report.svg" class="digi-image">
+    <ion-card-content>
+      <ion-card-title class="center-text">
+        Reports
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

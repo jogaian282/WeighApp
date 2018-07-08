@@ -1,0 +1,39 @@
+ion-item {
+    &.item-input, &.item-select, &.item-datetime {
+        &.item-md {
+            .item-inner {
+                border: 2px solid darkgrey !important;
+            }
+        }
+    }
+}
+
+.item-label-stacked .select-md, .item-label-floating .select-md {
+    margin:3px;
+    padding-left: 13px;
+}
+
+.text-input-md {
+    margin: 5px;
+    padding-left: 13px;
+}
+
+.toggle-label {
+    line-height: 28px;
+    >.toggle {
+        padding: 6px;
+    }
+}
+
+.datetime-md {
+    padding:0px 13px;
+}
+
+.btn-weighing-forms {
+    margin: 10px 0px;
+    button {
+      max-width: 50%;
+      border-radius: 0px;
+    }
+}
+

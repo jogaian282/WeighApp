@@ -1,0 +1,101 @@
+page-login {
+    .login-background-image{
+        width: 100%;
+        height: 30%;
+        background-repeat: no-repeat;
+        background-image: url('../../assets/imgs/logo-background.png');
+        position: absolute;
+        z-index: -10;
+        margin-top: 10px;
+    }
+    .login-logo-card {
+        cursor: pointer;
+        text-align: center;
+        .login-logo {
+            width: 120px;
+            margin: 10px auto;
+        }
+    }
+    .login-form {
+        margin: 3px;
+        position: relative;
+        opacity: 0.6;
+    }
+    .item-inner {
+        border: 1px solid #b7b7b7;
+        border-radius: 1px;
+        margin-left: 0px !important;
+    }
+    .item-md.item-block .item-inner {
+        border-bottom: 1px solid #b7b7b7;
+    }
+    .item > ion-icon {
+        font-size: 1.2em;
+    }
+}
+
+.item-inner > ion-icon {
+    font-size: 1.3em;
+    margin-right: 0px !important;
+    padding-top: 6px;
+}
+
+.item-md ion-icon[item-right] {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.label-md {
+    margin: 0px;
+    color: #000 !important;
+    padding-left: 13px !important;
+}
+
+ion-item {
+    &.item-input {
+      &.item-md {
+        &.input-has-focus {
+          .item-inner {
+            border: 2px solid darkgrey !important;
+          }
+        }
+      }
+    }
+}
+
+.btn-login {
+   background: #FBAE76;
+   color: #000;
+   font-size: 1.7rem;
+   font-weight: 600;
+   width: calc(100% - 5px - 13px);
+   height: 4.3rem;
+   float: right;
+}
+
+.btn-login:hover {
+    background: #FBAE76!important;
+}
+
+.btn-remember,.btn-forget-password {
+    text-transform: capitalize;
+    font-size: 0.9em;
+    font-weight: 600;
+    vertical-align: top;
+    height: 1.2rem;
+}
+
+.btn-forget-password {
+    float: right;
+}
+
+.signup-account {
+    color:#FBAE76;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    button {
+        background: transparent;
+        font-weight: 600;
+    }
+}
