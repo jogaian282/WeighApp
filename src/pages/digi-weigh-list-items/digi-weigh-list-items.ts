@@ -42,7 +42,7 @@ export class DigiWeighListItemsPage {
       .catch(e => console.log(e));
 
       // Get Records.
-      db.executeSql('SELECT * FROM digiWeigh', [])
+      db.executeSql('SELECT * FROM digiWeigh', {})
       .then(data => {
         this.digiWeighList = [];
         for(var k = 0; k < data.rows.length; k++) {
@@ -94,18 +94,17 @@ export class DigiWeighListItemsPage {
           text: 'Confirm',
           handler: () => {
             this.sqlite.create({
-              name: 'ionicdb.db',
+              name: 'digiWeighDb.db',
               location: 'default'
             }).then((db: SQLiteObject) => {
 
-              // db.executeSql('CREATE TABLE IF NOT EXISTS digiWeigh(id INTEGER PRIMARY KEY AUTOINCREMENT, billNo VARCHAR(50),vehicleNo VARCHAR(50),mobileNo VARCHAR(20),vehicleType TEXT,vehicleInOut TEXT,charges INTEGER,grossWeight INTEGER,netWeight INTEGER,customerName VARCHAR(75),itemName TEXT,quantity INTEGER,invChalanNo VARCHAR(50),paymentOptions TEXT,remarks VARCHAR(100),tareWeight INTEGER,date TEXT,field1 VARCHAR(50),field2 VARCHAR(50),field3 VARCHAR(50))', {})
-              // .then(res => console.log('Executed SQL'))
-              // .catch(e => console.log(e));
-              let sql_query = "DELETE FROM digiWeigh WHERE id ='"+selectedId+"'";
-              db.executeSql(sql_query, [])
+              let sql_query = "DELETE FROM digiWeigh WHERE id =?";
+              db.executeSql(sql_query, [selectedId])
               .then(res => {
                 this.getDigiWeighTableData();
-              }).catch(e => console.log(e));
+              }).catch(e => {
+                console.log(e)
+              });
 
             }).catch(e => {
               console.log(e)
