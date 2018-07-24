@@ -9,6 +9,7 @@ import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SQLite } from '@ionic-native/sqlite';
+import { Toast } from '@ionic-native/toast';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 
@@ -31,6 +32,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    Toast,
     SQLite,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

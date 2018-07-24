@@ -9,105 +9,103 @@
         <ion-title>DIGI WEIGHING</ion-title>
     </ion-navbar>
 </ion-header>
-<ion-content padding>
+<ion-content nopadding>
     <ion-list>
-        <ion-label stacked>Bill/Serial No:</ion-label>
-        <ion-item>
-            <ion-input type="text" name="billNo" [(ngModel)]="digiWeigh.billNo" required></ion-input>
-        </ion-item>
-        <ion-label stacked>Vehicle No:</ion-label>
-        <ion-item>
-            <ion-input type="tel" name="vehicleNo" [(ngModel)]="digiWeigh.vehicleNo" required></ion-input>
-        </ion-item>
-        <ion-label stacked>Mobile No:</ion-label>
-        <ion-item>
-            <ion-input type="tel" name="mobileNo" [(ngModel)]="digiWeigh.mobileNo" required></ion-input>
-        </ion-item>
-        <ion-label stacked>Type of Vehicle</ion-label>
-        <ion-item>
-            <ion-label stacked></ion-label>
-            <ion-select [(ngModel)]="digiWeigh.vehicleType" name="vehicleType" required>
-                <ion-option [value]="twoWheeler">Two-wheeler</ion-option>
-                <ion-option [value]="fourWheeler">Four-wheeler</ion-option>
-            </ion-select>
-        </ion-item>
-        <ion-label stacked>Vehicle IN/OUT</ion-label>
-        <ion-item>
-            <ion-label stacked></ion-label>
-            <ion-select [(ngModel)]="digiWeigh.vehicleInOut" name="vehicleInOut" required>
-                <ion-option [value]="vehicleIn">IN</ion-option>
-                <ion-option [value]="vehicleOut">OUT</ion-option>
-            </ion-select>
-        </ion-item>
-        <ion-label stacked>Charges:</ion-label>
-        <ion-item>
-            <ion-input type="number" [(ngModel)]="digiWeigh.charges" name="charges"></ion-input>
-        </ion-item>
-        <ion-label stacked>Gross Weight:</ion-label>
-        <ion-item>
-            <ion-input type="number" [(ngModel)]="digiWeigh.grossWeight" name="grossWeight"></ion-input>
-        </ion-item>
-        <ion-label stacked>Net Weight:</ion-label>
-        <ion-item>
-            <ion-input type="number" [(ngModel)]="digiWeigh.netWeight" name="netWeight"></ion-input>
-        </ion-item>
-        <ion-label stacked>Customer Name:</ion-label>
-        <ion-item>
-            <ion-input type="text" [(ngModel)]="digiWeigh.customerName" name="customerName"></ion-input>
-        </ion-item>
-        <ion-label stacked>Item Name:</ion-label>
-        <ion-item>
-            <ion-label stacked></ion-label>
-            <ion-select [(ngModel)]="digiWeigh.itemName" name="itemName" required>
-                <ion-option [value]="x">XXX</ion-option>
-                <ion-option [value]="y">YYY</ion-option>
-            </ion-select>
-        </ion-item>
-        <ion-label stacked>Quantity:</ion-label>
-        <ion-item>
-            <ion-input type="number" [(ngModel)]="digiWeigh.quantity" name="quantity" required></ion-input>
-        </ion-item>
-        <ion-label stacked>Inv/Chalan Number:</ion-label>
-        <ion-item>
-            <ion-input type="number" [(ngModel)]="digiWeigh.invChalanNo" name="invChalanNo" required></ion-input>
-        </ion-item>
-        <ion-label stacked>Cash/Card:</ion-label>
-        <ion-item>
-            <ion-label stacked></ion-label>
-            <ion-select [(ngModel)]="digiWeigh.paymentOptions" name="paymentOptions">
-                <ion-option [value]="cash">Cash</ion-option>
-                <ion-option [value]="card">Card</ion-option>
-            </ion-select>
-        </ion-item>
-        <ion-label stacked>Remarks:</ion-label>
-        <ion-item>
-            <ion-input type="text" [(ngModel)]="digiWeigh.remarks" name="remarks"></ion-input>
-        </ion-item>
-        <ion-label stacked>Tare Weight:</ion-label>
-        <ion-item>
-            <ion-input type="number" [(ngModel)]="digiWeigh.tareWeight" name="tareWeight"></ion-input>
-        </ion-item>
-        <ion-label stacked>Date:</ion-label>
-        <ion-item>
-            <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="digiWeigh.date" pickerFormat="DDDD MMMM YYYY"></ion-datetime>
-        </ion-item>
-        <ion-label stacked>Field 1:</ion-label>
-        <ion-item>
-            <ion-input type="text" name="field1"></ion-input>
-        </ion-item>
-        <ion-label stacked>Field 2:</ion-label>
-        <ion-item>
-            <ion-input type="text" name="field2"></ion-input>
-        </ion-item>
-        <ion-label stacked>Field 3:</ion-label>
-        <ion-item>
-            <ion-input type="text" name="field3"></ion-input>
-        </ion-item>
+        <form novalidate #digiWeighRef="ngForm" (ngSubmit)="addRecord()" autocomplete="off">
+            <ion-label stacked>Bill/Serial No:</ion-label>
+            <ion-item>
+                <ion-input type="text" name="billNo" [(ngModel)]="digiWeigh.billNo" required></ion-input>
+            </ion-item>
+            <ion-label stacked>Vehicle No:</ion-label>
+            <ion-item>
+                <ion-input type="tel" name="vehicleNo" [(ngModel)]="digiWeigh.vehicleNo" required></ion-input>
+            </ion-item>
+            <ion-label stacked>Mobile No:</ion-label>
+            <ion-item>
+                <ion-input type="tel" name="mobileNo" [(ngModel)]="digiWeigh.mobileNo" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Type of Vehicle</ion-label>
+                <ion-select [(ngModel)]="digiWeigh.vehicleType" name="vehicleType" required>
+                    <ion-option [value]="twoWheeler">Two-wheeler</ion-option>
+                    <ion-option [value]="fourWheeler">Four-wheeler</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>Vehicle IN/OUT</ion-label>
+                <ion-select [(ngModel)]="digiWeigh.vehicleInOut" name="vehicleInOut" required>
+                    <ion-option [value]="vehicleIn">IN</ion-option>
+                    <ion-option [value]="vehicleOut">OUT</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-label stacked>Charges:</ion-label>
+            <ion-item>
+                <ion-input type="number" [(ngModel)]="digiWeigh.charges" name="charges"></ion-input>
+            </ion-item>
+            <ion-label stacked>Gross Weight:</ion-label>
+            <ion-item>
+                <ion-input type="number" [(ngModel)]="digiWeigh.grossWeight" name="grossWeight"></ion-input>
+            </ion-item>
+            <ion-label stacked>Net Weight:</ion-label>
+            <ion-item>
+                <ion-input type="number" [(ngModel)]="digiWeigh.netWeight" name="netWeight"></ion-input>
+            </ion-item>
+            <ion-label stacked>Customer Name:</ion-label>
+            <ion-item>
+                <ion-input type="text" [(ngModel)]="digiWeigh.customerName" name="customerName"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Item Name:</ion-label>
+                <ion-select [(ngModel)]="digiWeigh.itemName" name="itemName" required>
+                    <ion-option [value]="x">XXX</ion-option>
+                    <ion-option [value]="y">YYY</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-label stacked>Quantity:</ion-label>
+            <ion-item>
+                <ion-input type="number" [(ngModel)]="digiWeigh.quantity" name="quantity" required></ion-input>
+            </ion-item>
+            <ion-label stacked>Inv/Chalan Number:</ion-label>
+            <ion-item>
+                <ion-input type="number" [(ngModel)]="digiWeigh.invChalanNo" name="invChalanNo" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Cash/Card:</ion-label>
+                <ion-select [(ngModel)]="digiWeigh.paymentOptions" name="paymentOptions">
+                    <ion-option [value]="cash">Cash</ion-option>
+                    <ion-option [value]="card">Card</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-label stacked>Remarks:</ion-label>
+            <ion-item>
+                <ion-input type="text" [(ngModel)]="digiWeigh.remarks" name="remarks"></ion-input>
+            </ion-item>
+            <ion-label stacked>Tare Weight:</ion-label>
+            <ion-item>
+                <ion-input type="number" [(ngModel)]="digiWeigh.tareWeight" name="tareWeight"></ion-input>
+            </ion-item>
+            <ion-label stacked>Date:</ion-label>
+            <ion-item>
+                <ion-datetime displayFormat="DD/MM/YYYY" name="date" [(ngModel)]="digiWeigh.date" pickerFormat="DDDD MMMM YYYY"></ion-datetime>
+            </ion-item>
+            <ion-label stacked>Field 1:</ion-label>
+            <ion-item>
+                <ion-input type="text" name="field1" [(ngModel)]="digiWeigh.field1"></ion-input>
+            </ion-item>
+            <ion-label stacked>Field 2:</ion-label>
+            <ion-item>
+                <ion-input type="text" name="field2" [(ngModel)]="digiWeigh.field2"></ion-input>
+            </ion-item>
+            <ion-label stacked>Field 3:</ion-label>
+            <ion-item>
+                <ion-input type="text" name="field3" [(ngModel)]="digiWeigh.field3"></ion-input>
+            </ion-item>
+            <div class="btn-weighing-forms">
+                <button ion-button tappable>E-MAIL</button>
+                <button ion-button tappable type="submit">SAVE</button>
+                <button ion-button tappable>PRINT</button>
+                <button ion-button tappable type="button" (click)="resetRecord()">CANCEL</button>
+            </div>
+        </form>
     </ion-list>
-    <div class="btn-weighing-forms">
-        <button ion-button tappable>E-MAIL</button>
-        <button ion-button tappable (click)="saveData()" type="button">SAVE</button>
-        <button ion-button tappable>PRINT</button>
-        <button ion-button tappable>CANCEL</button>
-    </div>
 </ion-content>

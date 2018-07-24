@@ -1,7 +1,7 @@
 export class DigiWeigh {
     public billNo: string;
     public vehicleNo:string;
-    public MobileNo:string;
+    public mobileNo:string;
     public vehicleType: string;
     public vehicleInOut: string;
     public charges: number;
@@ -15,4 +15,7 @@ export class DigiWeigh {
     public remarks: string;
     public tareWeight: number;
     public date: string;
+    public field1: string;
+    public field2: string;
+    public field3: string;
 }

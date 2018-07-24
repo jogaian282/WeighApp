@@ -1,0 +1,21 @@
+page-digi-weigh-list-items {
+    ion-scroll[scrollX] {
+        white-space: nowrap;
+        height: 45px;
+        overflow: hidden;
+        .scroll-item {
+            display: inline-block;
+            ion-col {
+                white-space: nowrap;
+                padding: 3px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+    }
+    /* Hide ion-content scrollbar */
+    ::-webkit-scrollbar{
+        display:none;
+    }
+}

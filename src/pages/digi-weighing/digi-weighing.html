@@ -21,7 +21,7 @@
       </ion-card-title>
     </ion-card-content>
   </ion-card>
-  <button class="btn-weigh" type="button" ion-button block tappable>FIRST WEIGHMENT</button>
+  <button class="btn-weigh" type="button" (click)="navigateToDigiWeighingForms()" ion-button block tappable>FIRST WEIGHMENT</button>
 
   <button class="btn-weigh" type="button" (click)="openSecondWeighAlert()" ion-button block tappable>SECOND WEIGHMENT</button>
 
@@ -29,6 +29,4 @@
 
   <button class="btn-weigh" type="button" (click)="openFourthWeighAlert()" ion-button block tappable>TICKET REPRINT</button>
 
-  <!-- TODO -->
-  <button ion-button block class="btn-weigh" (click)="navigateToDigiWeighingForms()" tappable>CLICK</button>
 </ion-content>

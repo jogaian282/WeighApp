@@ -1,0 +1,80 @@
+<!--
+  Generated template for the DigiWeighListItemsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="custom-navbar-header-color">
+    <ion-title>DIGI WEIGH LIST ITEMS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content nopadding>
+  <ion-row>
+    <ion-item no-lines nopadding>
+      <ion-scroll scrollX="true">
+          <ion-row class="scroll-item">
+            <ion-col>Action</ion-col>
+            <ion-col>S.No</ion-col>
+            <ion-col>Bill No.</ion-col>
+            <ion-col>Vehicle No.</ion-col>
+            <ion-col>Mobile No.</ion-col>
+            <ion-col>Vehicle Type</ion-col>
+            <ion-col>Vehicle In/Out</ion-col>
+            <ion-col>Charges</ion-col>
+            <ion-col>Gross Weight</ion-col>
+            <ion-col>Net Weight</ion-col>
+            <ion-col>Customer Name</ion-col>
+            <ion-col>Item Name</ion-col>
+            <ion-col>Quantity</ion-col>
+            <ion-col>Invchalan No.</ion-col>
+            <ion-col>Payment Options</ion-col>
+            <ion-col>Remarks</ion-col>
+            <ion-col>Tare Weight</ion-col>
+            <ion-col>Date</ion-col>
+            <ion-col>Field 1</ion-col>
+            <ion-col>Field 2</ion-col>
+            <ion-col>Field 3</ion-col>
+            <!-- <div style='white-space: nowrap; overflow: hidden;text-overflow: ellipsis;background-color:orange'>aaaaazzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzaaaaaaaaaaaaaaaaaaaaaaaaaaa</div> -->
+          </ion-row>
+      </ion-scroll>
+    </ion-item>
+  </ion-row>
+  <ion-row *ngFor="let digiWeigh of digiWeighList; let i=index">
+    <ion-item no-lines no-padding>
+      <ion-scroll scrollX="true">
+        <ion-row class="scroll-item">
+          <ion-col>
+            <button ion-button icon-only type="button" color="danger" (click)="deleteSelectedRecord(digiWeigh.id)">
+              <ion-icon name="trash"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col>{{ i + 1 }}</ion-col>
+          <ion-col>{{ digiWeigh.billNo }}</ion-col>
+          <ion-col>{{ digiWeigh.vehicleNo }}</ion-col>
+          <ion-col>{{ digiWeigh.mobileNo }}</ion-col>
+          <ion-col>{{ digiWeigh.vehicleType }}</ion-col>
+          <ion-col>{{ digiWeigh.vehicleInOut }}</ion-col>
+          <ion-col>{{ digiWeigh.charges }}</ion-col>
+          <ion-col>{{ digiWeigh.grossWeight }}</ion-col>
+          <ion-col>{{ digiWeigh.netWeight }}</ion-col>
+          <ion-col>{{ digiWeigh.customerName }}</ion-col>
+          <ion-col>{{ digiWeigh.itemName }}</ion-col>
+          <ion-col>{{ digiWeigh.quantity }}</ion-col>
+          <ion-col>{{ digiWeigh.invChalanNo }}</ion-col>
+          <ion-col>{{ digiWeigh.paymentOptions }}</ion-col>
+          <ion-col>{{ digiWeigh.remarks }}</ion-col>
+          <ion-col>{{ digiWeigh.tareWeight }}</ion-col>
+          <ion-col>{{ digiWeigh.date }}</ion-col>
+          <ion-col>{{ digiWeigh.field1 }}</ion-col>
+          <ion-col>{{ digiWeigh.field2 }}</ion-col>
+          <ion-col>{{ digiWeigh.field3 }}</ion-col>
+        </ion-row>
+      </ion-scroll>
+    </ion-item>
+  </ion-row>
+</ion-content>

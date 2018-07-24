@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
+import { FormsModule } from '@angular/forms';
 import { DigiWeighingFormsPage } from './digi-weighing-forms';
 import { HttpClientModule } from '@angular/common/http';
-import { OfflineWebProvider } from '../../../providers/offline-web/offline-web';
 
 @NgModule({
   declarations: [
@@ -10,10 +10,10 @@ import { OfflineWebProvider } from '../../../providers/offline-web/offline-web';
   ],
   imports: [
     IonicPageModule.forChild(DigiWeighingFormsPage),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
-    OfflineWebProvider
   ]
 })
 export class DigiWeighingFormsPageModule {}

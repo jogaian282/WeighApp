@@ -23,6 +23,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: 'HomePage', icon: 'home'},
       { title: 'Digi Weighing', component: 'DigiWeighingPage', icon: 'speedometer'},
+      { title: 'Digi Weighing List', component: 'DigiWeighListItemsPage', icon: 'list'},
       { title: 'Reports', component: 'ReportsPage', icon: 'pie'},
       { title: 'Settings', component: 'SettingsPage', icon: 'settings'},
       { title: 'Customers', component: 'CustomersPage', icon: 'person-add'},

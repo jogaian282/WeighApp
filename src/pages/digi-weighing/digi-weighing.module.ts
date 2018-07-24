@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
+import { FormsModule } from '@angular/forms';
 import { DigiWeighingPage } from './digi-weighing';
 import { DigiWeighingFormsPageModule } from './digi-weighing-forms/digi-weighing-forms.module';
 
@@ -9,7 +10,8 @@ import { DigiWeighingFormsPageModule } from './digi-weighing-forms/digi-weighing
   ],
   imports: [
     IonicPageModule.forChild(DigiWeighingPage),
-    DigiWeighingFormsPageModule
+    DigiWeighingFormsPageModule,
+    FormsModule
   ],
 })
 export class DigiWeighingPageModule {}
