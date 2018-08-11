@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, Platform, AlertController } from '
 import { DigiWeigh } from '../../../models/digi-weigh';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import { Toast } from '@ionic-native/toast';
+import { FormControl, Validator, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 /**
  * Generated class for the DigiWeighingPage page.
@@ -19,6 +20,8 @@ import { Toast } from '@ionic-native/toast';
 export class DigiWeighingFormsPage {
 
   public digiWeighList: any[] = [];
+  public digiWeighFormGroup: FormGroup;
+  public formOnSubmit:boolean;
   public digiWeigh: DigiWeigh = new DigiWeigh();
   @ViewChild('digiWeighRef') digiWeighForm;
 
@@ -26,13 +29,43 @@ export class DigiWeighingFormsPage {
               public navParams: NavParams,
               private sqlite: SQLite,
               private toast: Toast,
+              public formBuilder: FormBuilder,
               public alertCtrl: AlertController,
               public platform: Platform) {
+              this.createDigiWeighFormGroup();
   }
 
   ionViewDidLoad() : void {
     this.platform.ready().then(() => {
       this.createTable();
+    });
+  }
+
+  /**
+   * @description - Method to create digiweigh form group.
+  */
+  private createDigiWeighFormGroup() {
+    this.digiWeighFormGroup = this.formBuilder.group({
+      'billSeqNo': null,
+      'mobileNumber': [null, [Validators.required]],
+      'vehicleNumber': [null, [Validators.required, 
+      Validators.pattern('^[A-Z]{2}\s[0-9]{2}\s[A-Z]{2}\s[0-9]{4}$')]],
+      'customerName': [null, [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
+      'netWeight': [null],
+      'grossWeight': [null],
+      'tareWeight': [null],
+      'vehicleInOut': [null],
+      'vehicleType': [null],
+      'itemName': [null],
+      'quantity': [null, [Validators.min(0)]],
+      'paymentOptions': [null],
+      'remarks': [null],
+      'date': [{value: '', disabled: true}],
+      'charges': [null],
+      'invChalan': null,
+      'field1': null,
+      'field2': null,
+      'field3': null
     });
   }
 
@@ -54,6 +87,10 @@ export class DigiWeighingFormsPage {
    * @description - Method to save form data.
    */
   public addRecord() {
+    if (!this.digiWeighFormGroup.valid) {
+      this.formOnSubmit = true;
+      return false;
+    }
     this.sqlite.create({
       name: 'digiWeighDb.db',
       location: 'default'
@@ -115,5 +152,17 @@ export class DigiWeighingFormsPage {
   public resetRecord() {
     this.digiWeigh = new DigiWeigh();
     this.resetDigiWeighForm();
+  }
+
+  /**
+   * @description - Method to validate vehicle No.
+   */
+  public validateVehicleNo(event) {
+    var regex = new RegExp(` ^[A-Z]{2}\s[0-9]{2}\s[A-Z]{2}\s[0-9]{4}$ `);
+    var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+    if (!regex.test(key)) {
+      this.digiWeigh.vehicleNo = '';
+      return false;
+    }
   }
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrMaskerModule } from 'brmasker-ionic-3';
 import { DigiWeighingFormsPage } from './digi-weighing-forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -11,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     IonicPageModule.forChild(DigiWeighingFormsPage),
     HttpClientModule,
+    ReactiveFormsModule,
+    BrMaskerModule,
     FormsModule
   ],
   providers: [
